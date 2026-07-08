@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<!-- skill:chrome -->
+<style>
+/* Credit line — bottom-right */
+.design-ui-credit {
+  position: fixed;
+  bottom: 12px;
+  right: 12px;
+  font: 11px/1 system-ui, sans-serif;
+  color: rgba(128,128,128,0.5);
+  pointer-events: none;
+  z-index: 2147483647;
+  transition: opacity 0.4s ease;
+  user-select: none;
+  letter-spacing: 0.02em;
+}
+
+/* Hide chrome on touch devices */
+@media (hover: none) {
+  .design-ui-credit { display: none; }
+}
+
+/* Print fixes */
+@media print {
+  * {
+    transition: none !important;
+    animation: none !important;
+    box-shadow: none !important;
+  }
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .design-ui-credit { display: none !important; }
+}
+
+</style>
+<script>
+(function () {
+    // Design-ui pages are single compositions, so the whole body is editable.
+    function markEditable() {
+        document.body.classList.add('artifact-editable');
+    }
+
+    // Credit badge with idle-fade. Hover devices only.
+    function initChromeUI() {
+        if (!matchMedia('(hover: hover)').matches) return;
+
+        var credit = document.createElement('div');
+        credit.className = 'design-ui-credit';
+        credit.setAttribute('aria-hidden', 'true');
+        credit.innerHTML = '\u{1F49C} by ClickUp Brain';
+        document.body.appendChild(credit);
+
+        var timer = null;
+        var fade = function (out) { credit.style.opacity = out ? '0' : ''; };
+        fade(true);
+        var show = function () {
+            fade(false);
+            clearTimeout(timer);
+            timer = setTimeout(function () { fade(true); }, 3000);
+        };
+        document.addEventListener('mousemove', show);
+        show();
+    }
+
+    function init() {
+        markEditable();
+        initChromeUI();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+
+</script>
+<!-- /skill:chrome -->
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WOLF INVESTMENT | كتالوج الطابق التسويقي</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--bg:oklch(97% 0.005 60);--text:oklch(20% 0.01 60);--text-muted:oklch(45% 0.01 60);--text-light:oklch(60% 0.008 60);--brand:oklch(35% 0.08 30);--border:oklch(88% 0.01 60);--ease-out-expo:cubic-bezier(0.16,1,0.3,1)}body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;overflow-x:hidden}
+.site-nav{position:sticky;top:0;z-index:100;background:#0d0d0d;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.08)}.nav-logo{height:40px;width:auto}.nav-back{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;background:rgba(232,220,200,0.1);color:#e8dcc8;text-decoration:none;font-size:.82rem;font-weight:600;font-family:'Cairo',sans-serif;transition:all 200ms cubic-bezier(0.22,1,0.36,1);border:1px solid rgba(232,220,200,0.15)}.nav-back:hover{background:rgba(232,220,200,0.2);transform:translateX(4px)}
+.hero{min-height:45vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem 2rem;background:oklch(15% 0.02 30);color:oklch(95% 0.005 60);overflow:hidden;position:relative}.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 20% 80%,oklch(25% 0.06 30/0.4),transparent),radial-gradient(ellipse 60% 40% at 80% 20%,oklch(20% 0.04 270/0.3),transparent);pointer-events:none}.hero-content{position:relative;z-index:1;max-width:800px}.hero-brand{font-size:0.85rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.6;margin-bottom:1rem;font-weight:300}.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.2;margin-bottom:1rem}.hero h1 span{display:block;font-size:0.4em;font-weight:400;opacity:0.7;margin-top:0.5rem}.hero-stats{display:flex;gap:3rem;justify-content:center;margin-top:2.5rem;flex-wrap:wrap}.hero-stat{text-align:center}.hero-stat-value{font-size:2.2rem;font-weight:800;line-height:1;font-feature-settings:'tnum'}.hero-stat-label{font-size:0.8rem;opacity:0.6;margin-top:0.25rem}
+.gallery-section{padding:3rem 2rem;background:oklch(99% 0.003 60);max-width:900px;margin:0 auto}.gallery-title{text-align:center;margin-bottom:1.5rem}.gallery-title h2{font-size:1.5rem;font-weight:800}.gallery-title p{font-size:0.85rem;color:var(--text-muted);margin-top:0.25rem}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem}.gallery-item{overflow:hidden;border-radius:10px;border:1px solid var(--border);transition:box-shadow 300ms var(--ease-out-expo),transform 300ms var(--ease-out-expo)}.gallery-item:hover{box-shadow:0 6px 24px oklch(20% 0.01 60/0.1);transform:translateY(-2px)}.gallery-item img{width:100%;height:auto;display:block;cursor:zoom-in}
+.lightbox{display:none;position:fixed;inset:0;z-index:9999;background:oklch(5% 0.01 30/0.92);backdrop-filter:blur(16px);justify-content:center;align-items:center;padding:2rem;cursor:zoom-out}.lightbox.active{display:flex}.lightbox img{max-width:95%;max-height:90vh;object-fit:contain;border-radius:12px}.lightbox-close{position:absolute;top:1.5rem;left:1.5rem;width:40px;height:40px;border-radius:50%;background:oklch(20% 0.01 30/0.6);border:none;color:white;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.info-section{max-width:900px;margin:0 auto;padding:3rem 2rem;text-align:center}.info-section h2{font-size:1.4rem;font-weight:800;margin-bottom:1rem}.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-top:1.5rem}.info-card{background:oklch(15% 0.02 30);color:oklch(92% 0.005 60);padding:1.5rem;border-radius:12px;text-align:center}.info-card-icon{font-size:1.5rem;margin-bottom:0.5rem}.info-card-value{font-size:1.3rem;font-weight:700;margin-bottom:0.25rem;font-feature-settings:'tnum'}.info-card-label{font-size:0.75rem;opacity:0.5}
+.footer{text-align:center;padding:3rem 2rem;color:var(--text-light);font-size:0.8rem;border-top:1px solid var(--border)}
+@media(max-width:768px){.gallery-grid{grid-template-columns:repeat(2,1fr)}.hero{min-height:35vh;padding:3rem 1.5rem}.hero-stats{gap:1.5rem}.hero-stat-value{font-size:1.8rem}}
+</style>
+</head>
+<body>
+<nav class="site-nav"><a href="index.html" class="nav-back">→ الرئيسية</a><img src="https://i.postimg.cc/d1Dwq36D/1111.png" alt="Wolf Investment" class="nav-logo"></nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-brand">WOLF INVESTMENT</div>
+    <h1>الطابق التسويقي<span>محلات تجارية بمواصفات استثمارية عالية</span></h1>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-value">45</div><div class="hero-stat-label">وحدة تجارية</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">73-214</div><div class="hero-stat-label">م² المساحة</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">36</div><div class="hero-stat-label">شهر تقسيط</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">50%</div><div class="hero-stat-label">دفعة أولى</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery-section">
+  <div class="gallery-title"><h2>صور المشروع</h2><p>اضغط على الصورة لعرضها بالحجم الكامل</p></div>
+  <div class="gallery-grid">
+    <div class="gallery-item"><img src="https://i.postimg.cc/tn9c8Q8r/IMG-20260622-WA0027.jpg" alt="1" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://i.postimg.cc/LgmWGKGD/IMG-20260622-WA0030.jpg" alt="2" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://i.postimg.cc/Fkh6w5wZ/IMG-20260622-WA0038.jpg" alt="3" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://i.postimg.cc/SYmPHFHV/IMG-20260622-WA0045.jpg" alt="4" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://i.postimg.cc/GTbf6w67/IMG-20260622-WA0051.jpg" alt="5" onclick="openLightbox(this.src)"></div>
+    <div class="gallery-item"><img src="https://i.postimg.cc/n9nWNbN0/IMG-20260622-WA0054.jpg" alt="6" onclick="openLightbox(this.src)"></div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="عرض مكبر">
+</div>
+
+<section class="info-section">
+  <h2>تفاصيل الاستثمار</h2>
+  <div class="info-grid">
+    <div class="info-card"><div class="info-card-icon">🏪</div><div class="info-card-value">45</div><div class="info-card-label">وحدة تجارية</div></div>
+    <div class="info-card"><div class="info-card-icon">📐</div><div class="info-card-value">73-214 م²</div><div class="info-card-label">المساحات المتاحة</div></div>
+    <div class="info-card"><div class="info-card-icon">💰</div><div class="info-card-value">50%</div><div class="info-card-label">دفعة أولى</div></div>
+    <div class="info-card"><div class="info-card-icon">📅</div><div class="info-card-value">36 شهر</div><div class="info-card-label">فترة التقسيط</div></div>
+    <div class="info-card"><div class="info-card-icon">📞</div><div class="info-card-value"><a href="https://wa.me/972544228985?text=مرحبا، أريد الاستفسار عن المول التجاري" style="color:inherit;text-decoration:none">تواصل معنا</a></div><div class="info-card-label">للحجز والاستفسار</div></div>
+  </div>
+</section>
+
+<footer class="footer">Wolf Investment | جميع الحقوق محفوظة © 2026</footer>
+
+<script>
+function openLightbox(src){document.getElementById('lightbox-img').src=src;document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox();});
+</script>
+</body>
+</html>
